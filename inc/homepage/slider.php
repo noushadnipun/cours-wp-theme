@@ -7,9 +7,10 @@
         'post_type' => 'slider',
         'posts_per_page' => '-1',
         ));
-        if ($slideritems->have_posts()) : while ($slideritems->have_posts()) : $slideritems->the_post(); ?>
-            <img src="<?php the_post_thumbnail_url();?>" alt="slider" title="#<?php echo get_the_ID();?>" />
-        <?php endwhile; ?>
+        if ($slideritems->have_posts()) :
+            while ($slideritems->have_posts()) : $slideritems->the_post(); ?>
+                <img style="" src="<?php the_post_thumbnail_url();?>" alt="slider" title="#<?php echo get_the_ID();?>" />
+            <?php endwhile; ?>
         <?php endif;  
         wp_reset_query(); ?> 
         </div>

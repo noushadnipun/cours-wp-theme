@@ -1,10 +1,14 @@
 <!doctype html>
+<?php 
+    global $options;
+    $options = get_option('my_framework');
+?>
 <html class="no-js" lang="">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Academics | Home 1</title>
+    <title>CoURS| Home</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -37,7 +41,8 @@
     <link rel="stylesheet" href="<?php assets();?>/css/reImageGrid.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php assets();?>/css/style.css">
-    <!-- Modernizr Js -->
+
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css"> 
     <script src="<?php assets();?>/js/modernizr-2.8.3.min.js"></script>
     <?php wp_head();?>
 </head>
@@ -52,12 +57,15 @@
                         <div class="row">
                             <div class="col-lg-2 col-md-3">
                                 <div class="logo-area">
-                                    <a href="index-2.html"><img class="img-responsive" src="img/logo.png" alt="logo"></a>
+                                    <a href="index-2.html">
+                                        <img class="img-responsive" src="<?php echo $options['upload-logo']['url'];?>" alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-md-9">
+                        
                                 <nav id="desktop-nav">
                                     <ul>
+                                        
                                         <li class="active"><a href="#">Home</a>
                                             <ul>
                                                 <li class="active"><a href="index-2.html">Home 1</a></li>
@@ -161,15 +169,15 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li><a href="#">Home</a>
+                                        <!-- <li><a href="#">Home</a>
                                             <ul>
-                                                <li><a href="index-2.html">Home 1</a></li>
+                                                <li><a href="index2.html">Home 1</a></li>
                                                 <li><a href="index2.html">Home 2</a></li>
                                                 <li><a href="index3.html">Home 3</a></li>
                                                 <li><a href="index4.html">Home 4</a></li>
                                             </ul>
-                                        </li>
-                                        <li><a href="#">Pages</a>
+                                        </li> -->
+                                        <!-- <li><a href="#">Pages</a>
                                             <ul>
                                                 <li><a href="about1.html">About 1</a></li>
                                                 <li><a href="about2.html">About 2</a></li>
@@ -186,7 +194,7 @@
                                                 <li><a href="faq.html">Faq</a></li>
                                                 <li><a href="404.html">404 Error</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <li><a href="#">Courses</a>
                                             <ul>
                                                 <li><a href="courses1.html">Courses 1</a></li>
@@ -197,14 +205,14 @@
                                                 <li><a href="single-courses3.html">Course Details 3</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Research</a>
+                                        <!-- <li><a href="#">Research</a>
                                             <ul>
                                                 <li><a href="research1.html">Research 1</a></li>
                                                 <li><a href="research2.html">Research 2</a></li>
                                                 <li><a href="research3.html">Research 3</a></li>
                                                 <li><a href="single-research.html">Research Details</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <li><a href="#">News</a>
                                             <ul>
                                                 <li class="has-child-menu"><a href="#">News</a>

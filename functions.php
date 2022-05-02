@@ -27,11 +27,17 @@ function assets(){
  echo get_template_directory_uri().'/assets';
 }
 
-
+//Load Nav Menu
+register_nav_menus( array(
+	'primary' => __( 'Primary Menu', '' ),
+    'footer' => __( 'Footer Menu', '' ),
+) );
 //Load framework
 include_once get_template_directory(). '/framework/init.php';
 include_once get_template_directory(). '/framework/options.php';
 
 //Load Registered Post Type
 require_once get_template_directory().'/func/slider.php';
+require_once get_template_directory().'/func/NewsAndEvent.php';
+
 ?>
