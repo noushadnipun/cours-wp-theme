@@ -32,6 +32,7 @@ register_nav_menus( array(
 	'primary' => __( 'Primary Menu', '' ),
     'footer' => __( 'Footer Menu', '' ),
 ) );
+require_once get_template_directory().'/func/nav-walker.php';
 //Load framework
 include_once get_template_directory(). '/framework/init.php';
 include_once get_template_directory(). '/framework/options.php';

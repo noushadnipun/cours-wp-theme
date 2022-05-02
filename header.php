@@ -51,27 +51,57 @@
     <div id="wrapper">
         <!-- Header Area Start Here -->
         <header>
-            <div id="header1" class="header1-area">
+            <div id="header2" class="header4-area">
+                <div class="header-top-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                <div class="header-top-left">
+                                    <div class="logo-area">
+                                        <a href="<?php echo home_url();?>">
+                                            <img class="img-responsive" src="<?php echo $options['upload-logo']['url'] ?>" alt="logo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12">
+                                <div class="header-top-right">
+                                    <ul>
+                                        <?php if($options['phone']) : ?>
+                                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:<?php echo $options['phone']; ?>"> <?php echo $options['phone']; ?> </a></li>
+                                        <?php endif;?>
+                                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"><span class="__cf_email__"><?php echo $options['email']; ?></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="main-menu-area bg-primary" id="sticker">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-2 col-md-3">
-                                <div class="logo-area">
-                                    <a href="index-2.html">
-                                        <img class="img-responsive" src="<?php echo $options['upload-logo']['url'];?>" alt="logo"></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-9">
-                        
+                            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12">
                                 <nav id="desktop-nav">
+                                     <?php
+                                    wp_nav_menu( array(
+                                            'theme_location'  => 'primary',
+                                            'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+                                            'container'       => 'ul',
+                                            'container_class' => 'collapse navbar-collapse',
+                                            'container_id'    => '',
+                                            'menu_class'      => '',
+                                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                                            'walker'          => new WP_Bootstrap_Navwalker(),
+                                        ) );
+                                    ?>
+                                    <?php /*
                                     <ul>
-                                        
                                         <li class="active"><a href="#">Home</a>
                                             <ul>
-                                                <li class="active"><a href="index-2.html">Home 1</a></li>
+                                                <li><a href="index-2.html">Home 1</a></li>
                                                 <li><a href="index2.html">Home 2</a></li>
                                                 <li><a href="index3.html">Home 3</a></li>
-                                                <li><a href="index4.html">Home 4</a></li>
+                                                <li class="active"><a href="index4.html">Home 4</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">Pages</a>
@@ -150,13 +180,19 @@
                                             </ul>
                                         </li>
                                     </ul>
+                                    */ ?>
                                 </nav>
                             </div>
-                            <div class="col-lg-2 d-none d-lg-block">
-                                <div class="apply-btn-area">
-                                    <a href="#" class="apply-now-btn">Apply Now</a>
+                            <?php /*
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                <div class="header-search">
+                                    <form>
+                                        <input type="text" class="search-form" placeholder="Search...." required="">
+                                        <a href="#" class="search-button" id="search-button"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </form>
                                 </div>
                             </div>
+                            */ ?>
                         </div>
                     </div>
                 </div>
@@ -168,16 +204,29 @@
                         <div class="col-lg-12">
                             <div class="mobile-menu">
                                 <nav id="dropdown">
+                                    <?php
+                                    wp_nav_menu( array(
+                                            'theme_location'  => 'primary',
+                                            'depth'           => 3, // 1 = no dropdowns, 2 = with dropdowns.
+                                            'container'       => 'ul',
+                                            'container_class' => 'collapse navbar-collapse',
+                                            'container_id'    => 'main-nav-container',
+                                            'menu_class'      => 'nav navbar-nav',
+                                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                                            'walker'          => new WP_Bootstrap_Navwalker(),
+                                        ) );
+                                    ?>
+                                <?php /*    
                                     <ul>
-                                        <!-- <li><a href="#">Home</a>
+                                        <li><a href="#">Home</a>
                                             <ul>
-                                                <li><a href="index2.html">Home 1</a></li>
+                                                <li><a href="index-2.html">Home 1</a></li>
                                                 <li><a href="index2.html">Home 2</a></li>
                                                 <li><a href="index3.html">Home 3</a></li>
                                                 <li><a href="index4.html">Home 4</a></li>
                                             </ul>
-                                        </li> -->
-                                        <!-- <li><a href="#">Pages</a>
+                                        </li>
+                                        <li><a href="#">Pages</a>
                                             <ul>
                                                 <li><a href="about1.html">About 1</a></li>
                                                 <li><a href="about2.html">About 2</a></li>
@@ -191,10 +240,12 @@
                                                 <li><a href="shop1.html">Shop 1</a></li>
                                                 <li><a href="shop2.html">Shop 2</a></li>
                                                 <li><a href="single-shop.html">Shop Details</a></li>
+                                                <li><a href="account.html">Account</a></li>
+                                                <li><a href="registration.html">Registration</a></li>
                                                 <li><a href="faq.html">Faq</a></li>
                                                 <li><a href="404.html">404 Error</a></li>
                                             </ul>
-                                        </li> -->
+                                        </li>
                                         <li><a href="#">Courses</a>
                                             <ul>
                                                 <li><a href="courses1.html">Courses 1</a></li>
@@ -205,14 +256,14 @@
                                                 <li><a href="single-courses3.html">Course Details 3</a></li>
                                             </ul>
                                         </li>
-                                        <!-- <li><a href="#">Research</a>
+                                        <li><a href="#">Research</a>
                                             <ul>
                                                 <li><a href="research1.html">Research 1</a></li>
                                                 <li><a href="research2.html">Research 2</a></li>
                                                 <li><a href="research3.html">Research 3</a></li>
                                                 <li><a href="single-research.html">Research Details</a></li>
                                             </ul>
-                                        </li> -->
+                                        </li>
                                         <li><a href="#">News</a>
                                             <ul>
                                                 <li class="has-child-menu"><a href="#">News</a>
@@ -243,6 +294,7 @@
                                             </ul>
                                         </li>
                                     </ul>
+                                    */ ?>
                                 </nav>
                             </div>
                         </div>

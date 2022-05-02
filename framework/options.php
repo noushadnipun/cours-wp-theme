@@ -44,7 +44,7 @@ if( class_exists( 'CSF' ) ) {
          'title' => 'Upload Logo',
          'url'   => false,
     	  ),
-    	  
+    	  /*
     	  array(
          'id'    => 'language-select',
          'type'  => 'select',
@@ -56,13 +56,43 @@ if( class_exists( 'CSF' ) ) {
           ),
           'default'     => 'ver-bn'
     	  ),
+        */
 
         array(
-         'id'    => 'fb-link',
+         'id'    => 'email',
          'type'  => 'text',
-         'title' => 'Facebook Url',     
+         'title' => 'Email Address',     
+        ),
+        array(
+         'id'    => 'phone',
+         'type'  => 'text',
+         'title' => 'Phone',     
         ),
 
+        array(
+         'id'    => 'fb-page-link',
+         'type'  => 'text',
+         'title' => 'Facebook Page Url',     
+        ),
+
+        array(
+         'id'    => 'fb-group-link',
+         'type'  => 'text',
+         'title' => 'Facebook Group Url',     
+        ),
+
+        array(
+         'id'    => 'yt-link',
+         'type'  => 'text',
+         'title' => 'Youtube Url',     
+        ),
+
+        array(
+         'id'    => 'linkedin-link',
+         'type'  => 'text',
+         'title' => 'Linkedin Url',     
+        ),
+/*
         array(
          'id'    => 'twitter-link',
          'type'  => 'text',
@@ -81,7 +111,7 @@ if( class_exists( 'CSF' ) ) {
          'title' => 'Footer Column',
          'default'  => '4',     
         ),
-
+*/
         array(
          'id'    => 'copyright-text',
          'type'  => 'textarea',
@@ -107,7 +137,7 @@ if( class_exists( 'CSF' ) ) {
   //SubOption
 
   //Headline Section
-
+ /*
   CSF::createsection( $prefix, array(
      'parent' => 'homepage_fields',
      'title'  =>'News Headlines',
@@ -144,6 +174,8 @@ if( class_exists( 'CSF' ) ) {
 
      ) // End field
   )); // End Section
+
+
 
   //Home Lead Section
 
@@ -274,7 +306,7 @@ if( class_exists( 'CSF' ) ) {
 
   )); // End Section
 
-
+*/
   // About Theme Section
 
   CSF::createSection( $prefix, array(

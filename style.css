@@ -11,3 +11,8 @@ img.news-event {
     width: 130px;
     height: 90px;
 }
+
+.home_slider.nivoSlider img {
+    height: 550px !important;
+    object-fit: cover;
+}
