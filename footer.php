@@ -1,7 +1,13 @@
-   <footer>
+<?php 
+    global $options;
+    $options = get_option('my_framework');
+?>
+        <footer>
             <div class="footer-area-top">
                 <div class="container">
                     <div class="row">
+                        <?php  dynamic_sidebar('footer_widget');?>
+                        <?php /*
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-box">
                                 <a href="index-2.html"><img class="img-responsive" src="img/logo-footer.png" alt="logo"></a>
@@ -86,6 +92,7 @@
                                 </ul>
                             </div>
                         </div>
+                        */ ?>
                     </div>
                 </div>
             </div>
@@ -93,23 +100,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-                            <p>&copy; 2017 Academics All Rights Reserved. &nbsp; Designed by<a target="_blank" href="https://www.radiustheme.com/" rel="nofollow"> RadiusTheme</a></p>
+                            <p>
+                                <?php echo $options['copyright-text'];?>
+                            </p>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                            <ul class="payment-method">
-                                <li>
-                                    <a href="#"><img alt="payment-method" src="img/payment-method1.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img alt="payment-method" src="img/payment-method2.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img alt="payment-method" src="img/payment-method3.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img alt="payment-method" src="img/payment-method4.jpg"></a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>

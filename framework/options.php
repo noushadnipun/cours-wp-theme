@@ -137,33 +137,48 @@ if( class_exists( 'CSF' ) ) {
   //SubOption
 
   //Headline Section
- /*
+ 
   CSF::createsection( $prefix, array(
      'parent' => 'homepage_fields',
-     'title'  =>'News Headlines',
+     'title'  =>'Page',
      'fields' => array(
 
-         array(
+         /*array(
          'title'   => 'Headlines title',
          'id'      => 'news-headlines-title',
          'type'    => 'text',
          'default' => 'Headlines',
          ), // End Headlines title
+         */
 
          array(
-           'id'    => 'news-headlines',
+           'id'    => 'vision-page',
            'type'  => 'select',
-           'multiple' => true,
-           'title' =>  'Select category',
-           'options' => 'categories',
-           'chosen' => true,
+           'multiple' => false,
+           'title' =>  'Vision page',
+           'options' => 'page',
+           'chosen' => false,
            'width'  => '200px',
            'query_args' => array(
                'hide_empty' => false,
            ),
-           'desc'  => 'you can select multiple category',
+           //'desc'  => 'you can select multiple category',
          ), // End Headlines Multiple category
 
+         array(
+          'id'    => 'mission-page',
+          'type'  => 'select',
+          'multiple' => false,
+          'title' =>  'Mission page',
+          'options' => 'page',
+          'chosen' => false,
+          'width'  => '200px',
+          'query_args' => array(
+              'hide_empty' => false,
+          ),
+          //'desc'  => 'you can select multiple category',
+        ), // End Headlines Multiple category
+/*
          array (
           'id'    => 'show-max-number-news-headlines',
           'title' => 'Show Max Number of Headlines',
@@ -171,6 +186,7 @@ if( class_exists( 'CSF' ) ) {
           'default' => '5',
           'desc'   => 'for unlimited put -1',
          ), // End headlines Max Num show
+         */
 
      ) // End field
   )); // End Section
@@ -178,7 +194,7 @@ if( class_exists( 'CSF' ) ) {
 
 
   //Home Lead Section
-
+/*x
   CSF::createSection( $prefix, array(
     'parent' => 'homepage_fields',
     'title'  => 'Lead News section',

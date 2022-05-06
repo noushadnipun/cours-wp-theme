@@ -5,7 +5,8 @@ function aftertheme_default_functions() {
     // Add Title Tag   
     add_theme_support ('title-tag');
 	add_theme_support ('post-thumbnails');
-    add_theme_support( 'html5', array( 'gallery', 'caption' ) );
+    add_theme_support('html5', ['gallery', 'caption']);
+	add_post_type_support('page', 'excerpt');
 		
 	//excerpt
 	function excerpt($limit){
@@ -41,4 +42,18 @@ include_once get_template_directory(). '/framework/options.php';
 require_once get_template_directory().'/func/slider.php';
 require_once get_template_directory().'/func/NewsAndEvent.php';
 
-?>
+
+
+/** Widget  */
+function register_widgets(){
+	register_sidebar([
+		'id' => 'footer_widget',
+		'name' => 'Footer Widget',
+		'before_widget' => '<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12"><div class="footer-box">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+		'description' => ''
+	]);
+}
+add_action('widgets_init', 'register_widgets');

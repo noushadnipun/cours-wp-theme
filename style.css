@@ -5,8 +5,19 @@ Author Url :
 */
 @import url('https://fonts.maateen.me/solaiman-lipi/font.css');
 body {
-    /* font-family: 'SolaimanLipi', Arial, sans-serif !important; */
+    font-family: 'SolaimanLipi', Arial, sans-serif !important;
 }
+
+.header4-area .header-top-area .header-top-right ul li {
+    position: relative;
+    font-size: 16px;
+    padding-right: 0;
+    display: inline-block;
+    margin-left: 15px;
+    padding-right: 15px;
+    border-right: 0px solid #212121;
+}
+
 img.news-event {
     width: 130px;
     height: 90px;
@@ -15,4 +26,38 @@ img.news-event {
 .home_slider.nivoSlider img {
     height: 550px !important;
     object-fit: cover;
+} 
+.news-details-page-area {
+    padding: 25px 0;
+}
+.footer-box ul.menu li{
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.footer-box ul.menu li a:hover {
+    color: #fdc800;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.footer-box ul.menu li:before {
+    content: "\f105";
+    position: absolute;
+    left: 0;
+    font-family: FontAwesome;
+    color: #fdc800;
+    top: 0;
+}
+.footer-box ul.menu li a {
+    color: #f5f5f5;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 }

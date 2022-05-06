@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo $options['upload-favicon']['url'];?>">
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="<?php assets();?>/css/normalize.css">
     <!-- Main CSS -->
@@ -42,7 +42,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php assets();?>/css/style.css">
 
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css"> 
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css?<?php echo rand(0,999);?>"> 
     <script src="<?php assets();?>/js/modernizr-2.8.3.min.js"></script>
     <?php wp_head();?>
 </head>
@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12">
+                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12  my-auto">
                                 <div class="header-top-right">
                                     <ul>
                                         <?php if($options['phone']) : ?>

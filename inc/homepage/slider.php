@@ -5,7 +5,7 @@
         <?php 
         $slideritems = new WP_Query(array(
             'post_type' => 'slider',
-            'posts_per_page' => '2',
+            'posts_per_page' => '-1',
         ));
         if ($slideritems->have_posts()) :
             while ($slideritems->have_posts()) : $slideritems->the_post(); ?>
