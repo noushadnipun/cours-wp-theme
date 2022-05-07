@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\cp"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"random": "cpp",
+			"ostream": "cpp",
+			"iostream": "cpp",
+			"bitset": "cpp",
+			"chrono": "cpp",
+			"algorithm": "cpp"
+		},
+		"workbench.panel.defaultLocation": "right",
+		"terminal.integrated.fontSize": 15
+	}
+}
