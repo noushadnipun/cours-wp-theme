@@ -11,13 +11,16 @@ function aftertheme_default_functions() {
 	//excerpt
 	function excerpt($limit){
 		$content = preg_replace("/<img(.*?)>/si", "", get_the_content());
-		//$post_content = explode(" " , get_the_content());
+		$post_content = wp_trim_words(get_the_content(), $limit);
+		$post_content = apply_filters('the_content', $post_content);
+		$post_content = str_replace(']]>',']]&gt;', $post_content);
 		$post_content = explode(" " , $content);
 		$less_content = array_slice ($post_content, 0, $limit);
-		echo implode (" ", $less_content);
+		//echo implode (" ", $less_content);
+		echo wp_trim_words(get_the_content(), $limit);
 	}	
 	function tnews_custom_excerpt_length( $length ) {
-    return 20;
+    	return 20;
     }
     add_filter( 'excerpt_length', 'tnews_custom_excerpt_length', 999 );
 }
@@ -38,10 +41,38 @@ require_once get_template_directory().'/func/nav-walker.php';
 include_once get_template_directory(). '/framework/init.php';
 include_once get_template_directory(). '/framework/options.php';
 
+
+//Load meta Fields
+
+// Define path and URL to the ACF plugin.
+define( 'MY_ACF_PATH', get_stylesheet_directory() . '/metafields/' );
+define( 'MY_ACF_URL', get_stylesheet_directory_uri() . '/metafields/' );
+
+// Include the ACF plugin.
+include_once( MY_ACF_PATH . 'acf.php' );
+
+// Customize the url setting to fix incorrect asset URLs.
+add_filter('acf/settings/url', 'my_acf_settings_url');
+function my_acf_settings_url( $url ) {
+    return MY_ACF_URL;
+}
+
+// (Optional) Hide the ACF admin menu item.
+add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
+function my_acf_settings_show_admin( $show_admin ) {
+    return false;
+}
+
+//Load saved Metabox
+require_once get_template_directory().'/func/acf/events.php';
+
+
 //Load Registered Post Type
 require_once get_template_directory().'/func/slider.php';
 require_once get_template_directory().'/func/NewsAndEvent.php';
 
+//Load Paginate
+require_once get_template_directory().'/func/paginition.php';
 
 
 /** Widget  */
@@ -57,3 +88,9 @@ function register_widgets(){
 	]);
 }
 add_action('widgets_init', 'register_widgets');
+
+//Load Widget
+require_once get_template_directory().'/func/widget/social-widget.php';
+
+//core
+require_once get_template_directory().'/func/wp-core.php';

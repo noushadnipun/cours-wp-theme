@@ -116,24 +116,29 @@
     <!-- jquery-->
     
     <script src="<?php assets();?>/js/jquery-2.2.4.min.js" type="text/javascript"></script>
-    <!-- Plugins js -->
-    <script src="<?php assets();?>/js/plugins.js" type="text/javascript"></script>
+
     <!-- Bootstrap js -->
     <script src="<?php assets();?>/js/bootstrap.min.js" type="text/javascript"></script>
-    <!-- WOW JS -->
-    <script src="<?php assets();?>/js/wow.min.js"></script>
     <!-- Nivo slider js -->
     <script src="<?php assets();?>/vendor/slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
     <script src="<?php assets();?>/vendor/slider/home.js" type="text/javascript"></script>
-    <!-- Owl Cauosel JS -->
-    <script src="<?php assets();?>/vendor/OwlCarousel/owl.carousel.min.js" type="text/javascript"></script>
+
     <!-- Meanmenu Js -->
     <script src="<?php assets();?>/js/jquery.meanmenu.min.js" type="text/javascript"></script>
     <!-- Srollup js -->
     <script src="<?php assets();?>/js/jquery.scrollUp.min.js" type="text/javascript"></script>
-    <!-- jquery.counterup js -->
+
+    <!-- WOW JS -->
+    <script src="<?php assets();?>/js/wow.min.js"></script>
+
+    <?php /*
+        <!-- Owl Cauosel JS -->
+    <script src="<?php assets();?>/vendor/OwlCarousel/owl.carousel.min.js" type="text/javascript"></script>
+        <!-- jquery.counterup js -->
     <script src="<?php assets();?>/js/jquery.counterup.min.js"></script>
     <script src="<?php assets();?>/js/waypoints.min.js"></script>
+        <!-- Plugins js -->
+    <script src="<?php assets();?>/js/plugins.js" type="text/javascript"></script>
     <!-- Countdown js -->
     <script src="<?php assets();?>/js/jquery.countdown.min.js" type="text/javascript"></script>
     <!-- Isotope js -->
@@ -142,8 +147,16 @@
     <script src="<?php assets();?>/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
     <!-- Gridrotator js -->
     <script src="<?php assets();?>/js/jquery.gridrotator.js" type="text/javascript"></script>
+     */ ?>
     <!-- Custom Js -->
-    <script src="<?php assets();?>/js/main.js" type="text/javascript"></script>
+    <script src="<?php assets();?>/js/main.js?<?php echo rand(0,999);?>" type="text/javascript"></script>
+
+    <script>
+         /*-------------------------------------
+     jQuery MeanMenu activation code
+     --------------------------------------*/
+    $('nav#dropdown').meanmenu({ siteLogo: "<a href='<?php echo home_url();?>' class='logo-mobile-menu'><img style='width: 190px;' src='<?php echo $options['upload-logo']['url']?>' /></a>" });
+    </script>
     <?php wp_footer();?>
 </body>
 

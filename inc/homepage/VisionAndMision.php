@@ -23,7 +23,6 @@ $missionPage = getVmPage($options['mission-page']);
                             <a href="<?php echo $visionPage->guid;?>" class="">...read more</a> </p>
                         
                     </div>
-
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 news-inner-area">
                         <h2 class="title-default-left"><?php echo $missionPage->post_title;?></h2>
                             <p><?php echo $missionPage->post_excerpt; ?> 
