@@ -21,12 +21,12 @@ if ($eventitem->have_posts()) {
 <div class="news-event-area">
     <div class="container">
         <div class="row">
+            <?php if ($newsitems->have_posts()) : ?>
             <div class="col-xl-<?php echo  $newsCol;?> col-lg-<?php echo  $newsCol;?> col-md-<?php echo  $newsCol;?> col-sm-12 news-inner-area">
                 <h2 class="title-default-left">Latest News</h2>
                 <ul class="news-wrapper">
                 <?php 
-                if ($newsitems->have_posts()) :
-                    while ($newsitems->have_posts()) : $newsitems->the_post(); ?>
+                while ($newsitems->have_posts()) : $newsitems->the_post(); ?>
                     <li>
                         <div class="news-img-holder">
                             <a href="<?php the_permalink();?>">
@@ -38,14 +38,14 @@ if ($eventitem->have_posts()) {
                             <p><?php excerpt(15)?></p>
                         </div>
                     </li>
-                    <?php endwhile; ?>
-                    <?php endif;  
-                    wp_reset_query(); ?> 
+                <?php endwhile; 
+                wp_reset_query(); ?> 
                 </ul>
                 <div class="news-btn-holder">
                     <a href="<?php echo home_url() ?>/?post_type=news" class="view-all-accent-btn">View All</a>
                 </div>
             </div>
+            <?php endif; ?>  
             <?php  if ($eventitem->have_posts()) : ?>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 event-inner-area">
                 <h2 class="title-default-left">Upcoming Events</h2>

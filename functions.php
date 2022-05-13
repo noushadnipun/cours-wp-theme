@@ -60,16 +60,19 @@ function my_acf_settings_url( $url ) {
 // (Optional) Hide the ACF admin menu item.
 add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
 function my_acf_settings_show_admin( $show_admin ) {
-    return false;
+    return true;
 }
 
 //Load saved Metabox
 require_once get_template_directory().'/func/acf/events.php';
+require_once get_template_directory().'/func/acf/executive-body.php';
 
 
 //Load Registered Post Type
+
 require_once get_template_directory().'/func/slider.php';
 require_once get_template_directory().'/func/NewsAndEvent.php';
+require_once get_template_directory().'/func/executive.php';
 
 //Load Paginate
 require_once get_template_directory().'/func/paginition.php';

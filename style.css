@@ -54,6 +54,16 @@ body {
     border-left: 0.3em solid transparent;
 }
 
+nav#desktop-nav ul li a {
+  padding: 30px 20px;
+  display: block;
+  text-transform: capitalize;
+}
+nav#desktop-nav ul li > ul > li > a:hover {
+  padding: 10px 10px 10px 15px;
+  display: block;
+  color: #002147;
+}
 img.news-event {
     width: 130px;
     height: 90px;
@@ -129,3 +139,109 @@ img.news-event-archive {
     transition: all 0.5s ease-out;
 }
 
+/** Team */
+.team1 {
+  font-family: "Montserrat", sans-serif;
+	color: #8d97ad;
+  font-weight: 300;
+}
+
+.team1 h1, .team1 h2, .team1 h3, .team1 h4, .team1 h5, .team1 h6 {
+  color: #3e4555;
+}
+
+.team1 .font-weight-medium {
+	font-weight: 500;
+}
+
+.team1 .bg-light {
+    background-color: #f4f8fa !important;
+}
+
+.team1 .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+}
+
+.team1 .pro-pic {
+  min-height: 200px;
+}
+
+.team1 .pro-pic .card-img-overlay {
+  background: rgba(26, 139, 243, 0.87);
+  display: none;
+}
+
+.team1 .pro-pic .card-img-overlay ul {
+  top: 50%;
+}
+
+.team1 .pro-pic .card-img-overlay ul li a {
+  -webkit-transition: 0.1s ease-in;
+  -o-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.team1 .pro-pic .card-img-overlay ul li a:hover {
+  -webkit-transform: translate3d(0px, -5px, 0px);
+  transform: translate3d(0px, -5px, 0px);
+}
+
+.team1 .pro-pic:hover .card-img-overlay {
+  display: block;
+}
+.team1 .subtitle-designition {
+    color: #8d97ad;
+    line-height: 24px;
+    font-size: 13px;
+}
+.team1 ul li a {
+    color: #8d97ad;
+    padding-right: 15px;
+    -webkit-transition: 0.1s ease-in;
+    -o-transition: 0.1s ease-in;
+    transition: 0.1s ease-in;
+}
+
+
+
+
+
+.team4 {
+  font-family: "Montserrat", sans-serif;
+	color: #8d97ad;
+  font-weight: 300;
+}
+
+.team4 h1, .team4 h2, .team4 h3, .team4 h4, .team4 h5, .team4 h6 {
+  color: #3e4555;
+}
+
+.team4 .font-weight-medium {
+	font-weight: 500;
+}
+
+.team4 h5 {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.team4 .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+		font-size: 13px;
+}
+
+.team4 ul li a {
+  color: #8d97ad;
+  padding-right: 15px;
+  -webkit-transition: 0.1s ease-in;
+  -o-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.team4 ul li a:hover {
+  -webkit-transform: translate3d(0px, -5px, 0px);
+  transform: translate3d(0px, -5px, 0px);
+	color: #316ce8;
+}
